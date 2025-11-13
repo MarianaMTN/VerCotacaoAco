@@ -37,7 +37,7 @@ O projeto foi concluído com sucesso, atendendo a todos os requisitos e resolven
 
 O diagrama abaixo ilustra o fluxo completo do aplicativo, desde a inicialização até o resultado do envio do e-mail.
 
-![Fluxograma Completo do Aplicativo de Cotação]()
+![Fluxograma Completo do Aplicativo de Cotação](https://raw.githubusercontent.com/MarianaMTN/VerCotacaoAco/refs/heads/main/Fluxograma.svg)
 
 ### 2. Pseudocódigo
 
