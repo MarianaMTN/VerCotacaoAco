@@ -37,53 +37,7 @@ O projeto foi concluído com sucesso, atendendo a todos os requisitos e resolven
 
 O diagrama abaixo ilustra o fluxo completo do aplicativo, desde a inicialização até o resultado do envio do e-mail.
 
-\`\`\`mermaid
-graph TD
-
-    A[Inicio App Streamlit] --> B[Carregar Dados];
-    
-    B --> C[Configurar UI];
-    C --> D[Sidebar Selecao Aco];
-    
-    D --> E[Exibir Descricao Aco];
-    E --> F[Exibir Tabela Fornecedores];
-    
-    F --> G[Formulario Cotacao];
-    G --> H[Upload Arquivo Opcional];
-    
-    H --> I{Botao Enviar Clicado};
-    
-    I -- Sim --> J{Email Usuario Preenchido};
-    I -- Nao --> G;
-    
-    J -- Nao --> K[Exibir Erro Preenchimento];
-    J -- Sim --> L[Chamar send_email];
-    
-    L --> M[send_email: Construir Mensagem MIME];
-    
-    M --> N{Anexo Existe};
-    N -- Sim --> O[Anexar Arquivo Temp];
-    N -- Nao --> P[Continuar];
-    
-    O --> Q[Tentar Conexao SMTP e Login];
-    P --> Q;
-    
-    Q --> R{Envio Bem-Sucedido};
-    
-    R -- Sim --> S[Exibir Sucesso];
-    R -- Sim --> T{Anexo Existia};
-    
-    R -- Nao --> U[Capturar Erro Autenticacao];
-    U --> V[Exibir Erro Informativo];
-    V --> W[Fim];
-    
-    T -- Sim --> X[Remover Arquivo Temp];
-    T -- Nao --> W;
-    
-    X --> W;
-    S --> W;
-    K --> W;
-
+![Fluxograma Completo do Aplicativo de Cotação]()
 
 ### 2. Pseudocódigo
 
