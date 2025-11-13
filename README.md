@@ -38,7 +38,7 @@ O projeto foi concluído com sucesso, atendendo a todos os requisitos e resolven
 O diagrama abaixo ilustra o fluxo completo do aplicativo, desde a inicialização até o resultado do envio do e-mail.
 
 \`\`\`mermaid
-    graph TD
+graph TD
 
     A[Inicio App Streamlit] --> B[Carregar Dados];
     
