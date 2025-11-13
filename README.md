@@ -38,32 +38,34 @@ O projeto foi concluído com sucesso, atendendo a todos os requisitos e resolven
 O diagrama abaixo ilustra o fluxo completo do aplicativo, desde a inicialização até o resultado do envio do e-mail.
 
 \`\`\`mermaid
-graph TD
-    A[Inicio: Inicializacao do App Streamlit] --> B[Carregar Dados: Fornecedores e Descricoes de Aco];
-    B --> C[Configurar UI: Titulo e CSS Personalizado];
-    C --> D[Sidebar: Selecao do Tipo de Aco];
+    raph TD
+
+    A[Inicio App Streamlit] --> B[Carregar Dados];
     
-    D --> E[Exibir Descricao do Aco Selecionado];
-    E --> F[Exibir Tabela de Fornecedores];
+    B --> C[Configurar UI];
+    C --> D[Sidebar Selecao Aco];
     
-    F --> G[Formulario de Cotacao: Nome, Email, Mensagem];
-    G --> H[Upload de Arquivo Opcional];
+    D --> E[Exibir Descricao Aco];
+    E --> F[Exibir Tabela Fornecedores];
+    
+    F --> G[Formulario Cotacao];
+    G --> H[Upload Arquivo Opcional];
     
     H --> I{Botao Enviar Clicado};
     
-    I -- Sim --> J{Email do Usuario Preenchido};
+    I -- Sim --> J{Email Usuario Preenchido};
     I -- Nao --> G;
     
-    J -- Nao --> K[Exibir Erro: Preencha Email];
+    J -- Nao --> K[Exibir Erro Preenchimento];
     J -- Sim --> L[Chamar send_email];
     
-    L --> M[send_email: Construir Mensagem MIME com Reply-To];
+    L --> M[send_email: Construir Mensagem MIME];
     
     M --> N{Anexo Existe};
     N -- Sim --> O[Anexar Arquivo Temp];
     N -- Nao --> P[Continuar];
     
-    O --> Q[Tentar Conexao SMTP e Login com st.secrets];
+    O --> Q[Tentar Conexao SMTP e Login];
     P --> Q;
     
     Q --> R{Envio Bem-Sucedido};
@@ -81,7 +83,7 @@ graph TD
     X --> W;
     S --> W;
     K --> W;
-\`\`\`
+
 
 ### 2. Pseudocódigo
 
@@ -224,49 +226,3 @@ Para implantar este aplicativo no Streamlit Cloud, siga os passos abaixo:
     password = "sua_senha_de_app_de_16_caracteres"
     \`\`\`
 3.  **Deploy:** Conecte o Streamlit Cloud ao seu repositório, defina `streamlit_app.py` como o arquivo principal e adicione os segredos. O aplicativo estará pronto para uso.
-
----
-*Desenvolvido com Python e Streamlit.*
-
-
-```mermaid graph TD A[Inicio: Inicializacao do App Streamlit] --> B[Carregar Dados: Fornecedores e Descricoes de Aco]; B --> C[Configurar UI: Titulo e CSS Personalizado]; C --> D[Sidebar: Selecao do Tipo de Aco];
-
-D --> E[Exibir Descricao do Aco Selecionado];
-E --> F[Exibir Tabela de Fornecedores];
-
-F --> G[Formulario de Cotacao: Nome, Email, Mensagem];
-G --> H[Upload de Arquivo Opcional];
-
-H --> I{Botao Enviar Clicado};
-
-I -- Sim --> J{Email do Usuario Preenchido};
-I -- Nao --> G;
-
-J -- Nao --> K[Exibir Erro: Preencha Email];
-J -- Sim --> L[Chamar send_email];
-
-L --> M[send_email: Construir Mensagem MIME com Reply-To];
-
-M --> N{Anexo Existe};
-N -- Sim --> O[Anexar Arquivo Temp];
-N -- Nao --> P[Continuar];
-
-O --> Q[Tentar Conexao SMTP e Login com st.secrets];
-P --> Q;
-
-Q --> R{Envio Bem-Sucedido};
-
-R -- Sim --> S[Exibir Sucesso];
-R -- Sim --> T{Anexo Existia};
-
-R -- Nao --> U[Capturar Erro Autenticacao];
-U --> V[Exibir Erro Informativo];
-V --> W[Fim];
-
-T -- Sim --> X[Remover Arquivo Temp];
-T -- Nao --> W;
-
-X --> W;
-S --> W;
-K --> W;
-```
