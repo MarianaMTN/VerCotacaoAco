@@ -1,4 +1,4 @@
-# ⚙️ Cotação Rápida e Inteligente para Fornecedores de Aço
+# ⚙️ Cotação Rápida e Inteligente para Fornecedores 
 
 ## 💡 Resumo da Ideia
 
