@@ -1,35 +1,13 @@
 # ⚙️ Cotação Rápida e Inteligente para Fornecedores
 
-## 💡 Resumo da Ideia
-
-Este projeto consiste em um aplicativo web interativo, desenvolvido com **Streamlit**, que simplifica o processo de solicitação de cotações de aço. A ferramenta permite que o usuário selecione o tipo de aço desejado, visualize informações detalhadas do fornecedor e envie um e-mail de cotação personalizado e seguro, com a opção de anexar arquivos. O foco principal é a **segurança** das credenciais e a **rastreabilidade** da comunicação, garantindo que as respostas dos fornecedores sejam direcionadas diretamente ao e-mail do usuário final.
-
 ## 📄 Introdução
 
-A comunicação eficiente entre clientes e fornecedores é vital no setor de suprimentos industriais. Este aplicativo foi criado para modernizar e centralizar o processo de cotação, substituindo formulários estáticos ou e-mails manuais por uma interface dinâmica e funcional. A solução utiliza o poder do Python e do Streamlit para criar uma experiência de usuário rica, enquanto emprega bibliotecas padrão para garantir um envio de e-mail robusto e seguro via protocolo SMTP.
+A comunicação eficiente entre clientes e fornecedores é vital no setor de suprimentos industriais. Pensando nisso, este aplicativo foi desenvolvido com o objetivo de ajudar pessoas e empresas a encontrarem fornecedores de confiança com facilidade, de acordo com o tipo de material ou produto que necessitam. A solução moderniza e centraliza o processo de cotação ao substituir formulários estáticos ou e-mails manuais por uma interface dinâmica e funcional, permitindo ao usuário cadastrar suas necessidades e receber indicações de fornecedores confiáveis.
 
-## 🎯 Objetivos do Projeto
+## 🎯 Objetivo do Projeto
 
-Os principais objetivos alcançados durante o desenvolvimento foram:
-
-1.  **Desenvolver uma Interface Intuitiva:** Criar um frontend amigável e visualmente agradável (utilizando o esquema de cores Teal e Roxo) com o Streamlit.
-2.  **Garantir a Segurança das Credenciais:** Implementar o uso de `st.secrets` para armazenar o e-mail e a senha de aplicativo do Gmail, evitando a exposição de dados sensíveis no código-fonte.
-3.  **Implementar a Funcionalidade `Reply-To`:** Configurar o cabeçalho do e-mail para que as respostas dos fornecedores sejam enviadas diretamente para o e-mail do usuário que solicitou a cotação, e não para o e-mail de serviço.
-4.  **Suportar Anexos Opcionais:** Permitir que o usuário anexe arquivos (como especificações técnicas) à solicitação de cotação, garantindo que o envio funcione perfeitamente mesmo sem anexo.
-5.  **Tratamento de Erros Robusto:** Incluir tratamento de exceções específico para falhas de autenticação SMTP (código 535), fornecendo feedback claro ao usuário.
-6.  **Preparação para Deploy:** Estruturar o projeto para fácil implantação no Streamlit Cloud.
-
-## ✅ Resultados Alcançados
-
-O projeto foi concluído com sucesso, atendendo a todos os requisitos e resolvendo os desafios técnicos iniciais:
-
-| Funcionalidade | Status | Detalhes da Implementação |
-| :--- | :--- | :--- |
-| **Envio de E-mail** | ✅ Funcional | Utiliza `smtplib` e `email.mime` para comunicação segura via Gmail (SMTP/SSL). |
-| **Segurança de Credenciais** | ✅ Implementada | Credenciais armazenadas em `st.secrets` (Arquivo `.streamlit/secrets.toml`). |
-| **`Reply-To`** | ✅ Implementado | Garante que o fornecedor responda ao e-mail do usuário final. |
-| **Anexos** | ✅ Funcional | Suporta upload de arquivos e envia e-mail com ou sem anexo (tratamento de `NoneType` resolvido). |
-| **Estilização** | ✅ Personalizada | Aplicação de CSS customizado com o esquema de cores Teal e Roxo. |
+Desenvolver um sistema (ou aplicativo) que auxilie pessoas ou empresas a encontrarem fornecedores de com facilidade, de acordo com o tipo de material.
+O sistema buscará otimizar o processo de pesquisa e seleção do fornecedor, permitindo o usuário receber indicações precisas 
 
 ## 📐 Documentação Técnica
 
