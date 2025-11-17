@@ -11,7 +11,7 @@ O sistema buscará otimizar o processo de pesquisa e seleção do fornecedor, pe
 
 ## 📐 Documentação Técnica
 
-### 1. Fluxograma do Aplicativo (Mermaid)
+### 1. Fluxograma do Aplicativo
 
 O diagrama abaixo ilustra o fluxo completo do aplicativo, desde a inicialização até o resultado do envio do e-mail.
 
