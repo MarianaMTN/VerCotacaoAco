@@ -3,6 +3,24 @@
 ## 📄 Introdução
 
 A comunicação eficiente entre clientes e fornecedores é vital no setor de suprimentos industriais. Pensando nisso, este aplicativo foi desenvolvido com o objetivo de ajudar pessoas e empresas a encontrarem fornecedores de confiança com facilidade, de acordo com o tipo de material ou produto que necessitam. A solução moderniza e centraliza o processo de cotação ao substituir formulários estáticos ou e-mails manuais por uma interface dinâmica e funcional, permitindo ao usuário cadastrar suas necessidades e receber indicações de fornecedores confiáveis.
+## 🚀 Visão Geral do Projeto
+
+O **Cotação Rápida e Inteligente** é um aplicativo web desenvolvido em **Python** com o framework **Streamlit**, projetado para modernizar e simplificar o processo de solicitação de cotações de aço. Ele atua como uma ponte segura e eficiente entre o solicitante e os fornecedores, garantindo comunicação rastreável e proteção de dados sensíveis.
+
+### 🎯 Funcionalidades Principais
+
+| Funcionalidade | Descrição e Benefício |
+| :--- | :--- |
+| **Seleção e Informação de Aço** | Permite ao usuário selecionar o tipo de aço desejado e exibe instantaneamente a descrição detalhada do material e as informações de contato do fornecedor correspondente. |
+| **Envio de E-mail Robusto** | Envia solicitações de cotação diretamente para o e-mail do fornecedor via protocolo SMTP seguro (Gmail App Password). |
+| **Segurança de Credenciais** | Utiliza o mecanismo `st.secrets` do Streamlit para armazenar o e-mail e a senha de serviço em um **ambiente seguro**, garantindo que as credenciais nunca sejam expostas no código-fonte. |
+| **Comunicação Rastreável (`Reply-To`)** | O e-mail enviado é configurado com o cabeçalho `Reply-To` do usuário. Isso significa que a resposta do fornecedor será enviada **diretamente para o e-mail do solicitante**, e não para o e-mail de serviço do aplicativo. |
+| **Suporte a Anexos Opcionais** | Permite o upload de arquivos (como especificações técnicas) para serem anexados à solicitação. O sistema é robusto e funciona perfeitamente mesmo quando nenhum arquivo é anexado. |
+| **Tratamento de Erros** | Inclui tratamento de exceções específico para falhas de autenticação (ex: senha incorreta), fornecendo mensagens claras e informativas ao usuário. |
+| **Design Profissional** | A interface é estilizada com CSS customizado, seguindo um esquema de cores Teal e Roxo, para uma experiência de usuário moderna e agradável. |
+
+O aplicativo está totalmente desenvolvido, testado e pronto para ser implantado no Streamlit Cloud.
+
 
 ## 🎯 Objetivo do Projeto
 
