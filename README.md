@@ -148,7 +148,7 @@ Esta camada é dedicada exclusivamente à comunicação via protocolo SMTP:
 
 O aplicativo de Cotação Rápida e Inteligente é uma prova de conceito funcional e segura, pronta para ser utilizada em um ambiente de produção. A separação clara entre a lógica de interface (`streamlit_app.py`) e a lógica de comunicação (`email_sender.py`) garante a manutenibilidade e a escalabilidade do código. O uso de práticas de segurança modernas, como o `st.secrets` e o `Reply-To`, o torna uma solução confiável para a gestão de cotações.
 
-## 🔗 Anexos e Instruções de Deploy
+## 🔗 Anotações 
 
 Para implantar o aplicativo no Streamlit Cloud, foram feitos os passos abaixo:
 
