@@ -138,7 +138,12 @@ Esta camada é dedicada exclusivamente à comunicação via protocolo SMTP:
 *   **Função `send_email`:** A função é o ponto de contato com o servidor SMTP do Gmail. Ela utiliza a biblioteca `smtplib` para estabelecer uma conexão segura (via TLS) e autenticar-se usando as credenciais fornecidas.
 *   **Construção da Mensagem:** A mensagem é construída usando a classe `MIMEMultipart`, que permite a inclusão de texto e anexos. A inclusão do cabeçalho `Reply-To` com o e-mail do usuário final é uma funcionalidade chave, garantindo que o destinatário responda diretamente ao usuário, mesmo que o e-mail tenha sido enviado pelo e-mail de serviço do aplicativo.
 *   **Robustez:** A função é robusta, pois trata o anexo como opcional, evitando erros de tipo (`NoneType`). Além disso, ela implementa um tratamento de exceção específico para `SMTPAuthenticationError`, que captura falhas de login e as reporta de forma clara ao usuário, resolvendo os problemas de depuração iniciais.
-
+## 💡 Resultados
+*   **Funcionalidade Central:** O aplicativo permite que o usuário selecione um tipo de aço, visualize o fornecedor correspondente e envie uma solicitação de cotação por e-mail, com suporte para anexos opcionais.
+*   **Segurança:** As credenciais de envio (e-mail e Senha de Aplicativo do Gmail) são armazenadas de forma segura usando st.secrets, garantindo que nenhuma senha esteja exposta no código-fonte.
+*   **Comunicação Inteligente:** Foi implementada a funcionalidade Reply-To, garantindo que, embora o e-mail seja enviado por um serviço, a resposta do fornecedor seja direcionada diretamente para o e-mail do usuário final.
+*   **Tratamento:** O código inclui tratamento de erros específico para falhas de autenticação SMTP, fornecendo mensagens claras ao usuário em caso de problemas de login.
+    
 ## 💡 Conclusão
 
 O aplicativo de Cotação Rápida e Inteligente é uma prova de conceito funcional e segura, pronta para ser utilizada em um ambiente de produção. A separação clara entre a lógica de interface (`streamlit_app.py`) e a lógica de comunicação (`email_sender.py`) garante a manutenibilidade e a escalabilidade do código. O uso de práticas de segurança modernas, como o `st.secrets` e o `Reply-To`, o torna uma solução confiável para a gestão de cotações.
