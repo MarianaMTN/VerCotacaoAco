@@ -145,16 +145,16 @@ O aplicativo de Cotação Rápida e Inteligente é uma prova de conceito funcion
 
 ## 🔗 Anexos e Instruções de Deploy
 
-Para implantar este aplicativo no Streamlit Cloud, siga os passos abaixo:
+Para implantar o aplicativo no Streamlit Cloud, foram feitos os passos abaixo:
 
-1.  **Arquivos Essenciais:** Certifique-se de que os seguintes arquivos estejam no seu repositório GitHub:
+1.  **Arquivos Essenciais:**
     *   `streamlit_app.py` (Lógica principal e UI)
     *   `email_sender.py` (Função de envio de e-mail)
     *   `requirements.txt` (Contendo: `streamlit`, `pandas`, `pytz`)
-2.  **Segredos (NÃO ENVIAR PARA O GITHUB):** O arquivo `.streamlit/secrets.toml` **NÃO** deve ser enviado para o GitHub. Você deve copiar o conteúdo dele e colá-lo na seção **Advanced Settings -> Secrets** do Streamlit Cloud durante o deploy.
+2.  **Segredos (NÃO ENVIADO PARA O GITHUB):** O arquivo `.streamlit/secrets.toml` **NÃO** deve ser enviado para o GitHub. O conteúdo dele foi copiado e colado na seção **Advanced Settings -> Secrets** do Streamlit Cloud durante o deploy.
     \`\`\`toml
     [gmail]
     email = "seu_email_de_servico@gmail.com"
     password = "sua_senha_de_app_de_16_caracteres"
     \`\`\`
-3.  **Deploy:** Conecte o Streamlit Cloud ao seu repositório, defina `streamlit_app.py` como o arquivo principal e adicione os segredos. O aplicativo estará pronto para uso.
+3.  **Deploy:** Repositório conectado ao Streamlit Cloud, definido `streamlit_app.py` como o arquivo principal e adicionado os segredos. 
